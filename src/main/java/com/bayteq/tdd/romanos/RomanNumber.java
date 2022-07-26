@@ -3,12 +3,15 @@ package com.bayteq.tdd.romanos;
 public class RomanNumber {
 
     public String convertToRomanString(int number){
-        String res = "";
-        if(number == 1){
-            res = "I";
-        }else if (number ==2){
-            res="II";
+        if(number > 10){
+
+        }else if (number > 100){
+
         }
-        return res;
+        String[] unidades = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+        String[] decenas = {"X", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
+
+        return unidades[number];
+
     }
 }

@@ -8,6 +8,15 @@ public class RomanNumberTest {
     private final RomanNumber romanNumber = new RomanNumber();
 
     @Test
+    public void testZero(){
+        //setup
+        //exercise
+        String roman = romanNumber.convertToRomanString(0);
+        //assert
+        Assert.assertEquals("", roman);
+    }
+
+    @Test
     public void testA(){
         //setup
         //exercise
@@ -41,5 +50,23 @@ public class RomanNumberTest {
         String roman =  romanNumber.convertToRomanString(4);
         //assert
         Assert.assertEquals("IV", roman);
+    }
+
+    @Test
+    public void testE(){
+        //setup
+        //exercise
+        String roman =  romanNumber.convertToRomanString(5);
+        //assert
+        Assert.assertEquals("V", roman);
+    }
+
+    @Test
+    public void testF(){
+        //setup
+        //exercise
+        String roman =  romanNumber.convertToRomanString(10);
+        //assert
+        Assert.assertEquals("X", roman);
     }
 }
