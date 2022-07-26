@@ -2,16 +2,16 @@ package com.bayteq.tdd.romanos;
 
 public class RomanNumber {
 
-    public String convertToRomanString(int number){
-        if(number > 10){
+    public String convertToRomanString(int numberToConvert){
 
-        }else if (number > 100){
+        return convertDigitToRoman(numberToConvert);
 
-        }
+    }
+
+    private String convertDigitToRoman(int numberToConvert) {
         String[] unidades = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
         String[] decenas = {"X", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
 
-        return unidades[number];
-
+        return unidades[numberToConvert %10];
     }
 }

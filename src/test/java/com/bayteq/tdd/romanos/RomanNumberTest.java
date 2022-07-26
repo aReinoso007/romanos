@@ -65,8 +65,9 @@ public class RomanNumberTest {
     public void testF(){
         //setup
         //exercise
-        String roman =  romanNumber.convertToRomanString(10);
+        String roman =  romanNumber.convertToRomanString(9);
         //assert
-        Assert.assertEquals("X", roman);
+        Assert.assertEquals("IX", roman);
     }
+
 }
